@@ -8,7 +8,7 @@ One approach to creating robots with optimal performance is through artificial e
 ## 2.1 Body Design
 For the design of our body structure, we employed a tree structure. In this structure, each node represents a cube, and each edge signifies a joint between two cubes.  To build the tree structure, we randomly determine the size of the tree by generating a random integer. Once the size is determined, the tree is built in a random fashion, following the constraint that each node can have a maximum of three children.
 
-<img width="419" alt="image" src="https://user-images.githubusercontent.com/88709397/225153973-9f754b01-94f6-46ab-ae8d-888be7fee83d.png">
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225153973-9f754b01-94f6-46ab-ae8d-888be7fee83d.png">
 
 In this section, we have discussed the original design of the robot, while the symmetry design will be presented and discussed in detail in the upcoming Experiment session.
 
@@ -18,25 +18,31 @@ To create each cube in the structure, we generate random numbers between 0.1 and
 ### 2.1.2 Joints
 In our design, we employed the Socket-and-Ball Implementation, which involves adding a small cube, referred to as a "ball," with a size of 0, between two adjacent cubes. This addition allows for more complex movement between the cubes. Specifically, we used two joints to connect the first cube to the "ball" and the "ball" to the second cube, respectively. These two joints have free rotation axes that are perpendicular to each other, enabling movement similar to that of human shoulders. This design has proven to perform much better than a simple joint, allowing for more realistic and intricate movements.
 
-<img width="527" alt="image" src="https://user-images.githubusercontent.com/88709397/225145591-fe828aeb-ef41-44dd-b0a6-c0118b4ea470.png">
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225145591-fe828aeb-ef41-44dd-b0a6-c0118b4ea470.png">
 
 
 ## 2.2 Brain Design
 To design the brain of our robot, we utilized a fully connected linear layer. The linear layer was initialized with values ranging from -1 to 1. During operation, each sensor sends its sensory value to the brain, where it is processed by the linear layer. The resulting value is then multiplied by a motor range, which we set to 0.6 for this experiment. Finally, this value is sent to each motor neuron, enabling the robot to make the corresponding movement.
 
-<img width="548" alt="image" src="https://user-images.githubusercontent.com/88709397/225146867-fdf5197f-444d-4057-b392-85490147efa4.png">
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225146867-fdf5197f-444d-4057-b392-85490147efa4.png">
 
 ## 2.3 Evolution Plan Design
 ### 2.3.1 Mutation
 Our experiment involved defining three types of mutations. The first type is the brain mutation, which involves updating a single entry in the robot's brain. The second type is the body mutation, which entails changing the shape of two cubes. Finally, we implemented the sensor swap mutation, where the sensor is moved from one cube with the sensor to another cube without it.
 
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225166695-3c902f16-35ef-4891-9f53-d395fda4f516.png">
+
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225166746-5c7f47f1-6aa0-4f7e-8ec3-ac971f765f5e.png">
+
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225166793-36db9c4b-8776-4ac2-a37b-af270f66da41.png">
+
 ### 2.3.2 Selection
-The resulting mutated robots were evaluated for their performance on the task of moving in an environment with high gravitational force. The better-performing robots were then selected for the next generation, and the mutation process was repeated. This cycle of selection and mutation was repeated for hundreds of generations, allowing the robots to evolve and optimize their performance on the given task. Through this iterative process, we were able to observe the emergence of novel body and brain structures that enabled the robots to move in ways that were not previously possible.
+Each individual in each generation starts as an exact copy of its parent. After undergoing mutation, it is compared to its parent. The individual with better performance is then selected to move forward to the next generation. There is no crossover involved in this process. This cycle of selection and mutation was repeated for hundreds of generations, allowing the robots to evolve and optimize their performance on the given task. Through this iterative process, we were able to observe the emergence of novel body and brain structures that enabled the robots to move in ways that were not previously possible.
 
 # 3. Experiments
 ## 3.1 Brain evolution with random bodies vs. the co-evolution of bodies and brains
 
-<img width="465" alt="image" src="https://user-images.githubusercontent.com/88709397/225153754-bdc5bfac-d1e8-41f0-a6bf-628b15cb5d31.png">
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/88709397/225153754-bdc5bfac-d1e8-41f0-a6bf-628b15cb5d31.png">
 
 In our experiment, we had a control group where all three types of mutations were allowed to occur simultaneously. Conversely, in the test group, only one type of mutation was allowed to occur in each generation, and all three types of mutations were applied sequentially over the course of three generations.
 
