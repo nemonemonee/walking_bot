@@ -42,7 +42,7 @@ In our experiment, we had a control group where all three types of mutations wer
 
 Our hypothesis is that the test group, which underwent a more sequential mutation process, will exhibit better performance and a faster growth trend in the fitness curve. This is based on the idea that a more targeted and gradual mutation process may lead to a more efficient evolution of the robot's design.
 
-### 3.2.1 Implemetation Details
+### 3.1.1 Implemetation Details
 To ensure robust results, we ran the experiment for a total of 500 generations in the control group and 1500 generations in the test group. This allowed us to observe the long-term effects of the different mutation strategies on the evolution of the robots. In the test group, we evaluate the result from each generation where the generation number is a multiple of three. This allows for a fair comparison between the control and test groups, both of which have 500 generation entries.
 
 ## 3.2 Body Design: The Original vs. The Symmetric
@@ -52,11 +52,33 @@ In the natural world, many animals exhibit some form of symmetry. This raises th
 ### 3.2.1 Implemetation Details
 In this experiment, we utilize the test group from 3.1 as the control group since we are implementing the coevolution concept. However, we have simplified the process by eliminating the sensor swapping mutation since it is challenging to implement in the symmetry design. As a result, the test group runs for 1000 generations, and we only evaluate every even-numbered generation.
 
-
 # 4. Results
 I average the fitness scores of each generation.
+## 4.1 Brain evolution with random bodies vs. the co-evolution of bodies and brains
+
+## 4.2 Body Design: The Original vs. The Symmetric
 
 # 5. Discussion
+## 5.1 Interesting Observations
+The environment includes an obstacle block, which many robots in our experiment learned to push away rather than finding an alternate path. This unexpected behavior may be attributed to our greedy selection process, where the robot with the highest movement score is chosen for the next generation. Thus, if a robot learns to move towards the obstacle, its offspring are more likely to inherit this behavior and learn new pushing techniques based on it, instead of exploring easier paths.
+
+## 5.2 Failed Trails
+One of my failed design attempts involved training robots to climb a stair-like structure. However, due to the large number of cubes required to form the stairs, the training process proved to be incredibly time-consuming. As a result, I decided to abandon this approach and instead focused on creating an environment with high gravitational force.
+
+## 5.3 Possible Improvement
+### 5.3.1 More Mutations
+As we have separated the body and brain evolution in our experiment, we have restricted the mutation that adds or removes body parts. This is because such changes in the body will also necessitate corresponding changes in the brain, making it difficult to use a fixed genotype to build our robot. However, introducing more flexibility in the mutation can lead to better-performing robots. If more time is allowed, this is definitely a good direction to improve our design.
+
+### 5.3.2 Self-Intersecting
+To address this issue of overlapping, we can implement a simple separation algorithm that ensures each body part is positioned at a certain distance from other body parts. This can be achieved by checking the distance between each pair of cubes and moving them away from each other if they are too close. However, this algorithm can be time-consuming as the number of cubes increases.
+
+## 5.4 Future Work
+### 5.4.1 An experiment on the brain
+Recent deep learning research suggests that the model is capable of capturing the task-specific information within itself. In other words, the "brain" of our robots should encode the information about how to walk. If we extract this brain and use it as a hidden state for a new robot, and then change the environment, the new robot can quickly learn how to walk by learning a mapping to the hidden state. I find this idea intriguing and would like to explore it further in future work.
+
+### 5.4.2 Make the improvements and Re-run this experiment
+### 5.4.3 Redesign the failed trails
+### 5.4.4 A further study on the interesting observations
 
 # 6. Appendix
 
