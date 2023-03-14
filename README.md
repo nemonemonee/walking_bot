@@ -1,5 +1,31 @@
-# myBotFinal
- 
-I change the quadrupled creature into a dog 4-feet dog like creature. I fixed the leg to move along x axis. While I selected the creature over the movement on negative y-axis direction. I hope to see whether the creature will learn turn around.
+Introduction
 
-The creatuer indeed learns turn around first and move in straight afterwards as expected.
+Pyrosim
+Pybullet
+Ludobots
+
+The task is to move in an environment with high gravitational force (g=200).
+
+Project Design	
+Body Design
+Cubes
+Joints
+Socket-and-Ball Implementation is used. 
+
+
+Brain Design
+Network
+
+
+
+Evolution Plan Design
+Mutation
+Selection
+Experiments
+Body Plan
+Evolution Plan
+
+Results
+I average the fitness scores of each generation.
+
+Reference
