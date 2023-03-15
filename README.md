@@ -20,6 +20,7 @@ The code to draw the curves is :
 The code to display the best robot is :
   >python3 load.py
 
+(It is weired that this does not work properly every time. Just try rerun load.py if the robot does not move.)
 
 # 2. Project Design	
 ## 2.1 Body Design
