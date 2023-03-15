@@ -9,6 +9,7 @@ One approach to creating robots with optimal performance is through artificial e
 
 ## 1.2 Gif Picture
 
+![teaser-min](https://user-images.githubusercontent.com/88709397/225197485-fb5c58af-dea8-4ea1-b7c1-4b3271f100e4.gif)
 
 ## 1.3 Code Respitory
 The code is writeen in linux/macOS environment. The respitory  is https://github.com/nemonemonee/walking_bot.
