@@ -1,5 +1,6 @@
 from solution import SOLUTION
-
-s = SOLUTION(14627)
-s.load("save14627.soln")
+import time
+s = SOLUTION(1)
+s.load("best.soln")
+time.sleep(5)
 s.Start_Simulation("GUI")
