@@ -10,12 +10,12 @@ One approach to creating robots with optimal performance is through artificial e
 
 ## 1.3 Code Resipotory
 The code is writeen in linux/macOS environment. 
-
-python3 search.py
-
-python3 curve.py
-
-python3 load.py
+The code to run simulation is :
+  >python3 search.py
+The code to draw the curves is :
+  >python3 curve.py
+The code to display the best robot is :
+  >python3 load.py
 
 # 2. Project Design	
 ## 2.1 Body Design
@@ -72,15 +72,18 @@ In the natural world, many animals exhibit some form of symmetry. This raises th
 In this experiment, we utilize the test group from 3.1 as the control group since we are implementing the coevolution concept. However, we have simplified the process by eliminating the sensor swapping mutation since it is challenging to implement in the symmetry design. As a result, the test group runs for 1000 generations, and we only evaluate every even-numbered generation.
 
 # 4. Results and Analysis
-I average the fitness scores of each generation.
+To calculate the mean fitness score, I computed the average fitness score of all individuals in a given generation. Each methodology is represented by its own curve. For the maximum fitness score, I selected the best-performing individual at the end of the simulation for each methodology, and plotted its fitness score over the generations.
+
 ## 4.1 Graphs
 ![mean_fit](https://user-images.githubusercontent.com/88709397/225175828-28979830-ec79-47e9-b746-262d6d894cf5.png)
 
 ![fit_max](https://user-images.githubusercontent.com/88709397/225175856-ff30d314-d21b-4bb2-96d2-6e982ea6fcbd.png)
 
 ## 4.2 Brain evolution with random bodies vs. the co-evolution of bodies and brains
+Both graphs demonstrate a distinct advantage of the co-evolution methodology over the control group, which is in line with our hypothesis. The mean fitness graph indicates that the co-evolution method has a faster growth rate and achieves better final performance. In the max fitness graph, we observe a more gradual improvement over time for the co-evolution method, while the control group experiences intermittent spikes followed by long periods of stagnation. This discrepancy may be attributed to the fact that the control group alters too many parameters simultaneously, resulting in the selection of unfavorable mutations along with advantageous ones. Conversely, the co-evolution method assesses each mutation individually, enabling it to recognize and select favorable ones more effectively. This leads me to consider the possibility of implementing a learning rate in our mutation approach, allowing for more frequent mutations in the early generations and fewer in the later generations.
 
-## 4.2 Body Design: The Original vs. The Symmetric
+## 4.3 Body Design: The Original vs. The Symmetric
+Neither of the graphs provide evidence to support the hypothesis that a symmetry design can achieve better walking performance. There are a few possible reasons for this, including the inadequacy of our control group comparison. The control group involves mutations that swap sensors, while this is not implemented in our symmetry design. Additionally, the use of a central symmetric design rather than an axis symmetric one may have impacted our results. However, we cannot definitively conclude that our hypothesis is false. Further trials are necessary to thoroughly test this hypothesis.
 
 # 5. Discussion
 ## 5.1 Interesting Observations
@@ -101,8 +104,9 @@ To address this issue of overlapping, we can implement a simple separation algor
 Recent deep learning research suggests that the model is capable of capturing the task-specific information within itself. In other words, the "brain" of our robots should encode the information about how to walk. If we extract this brain and use it as a hidden state for a new robot, and then change the environment, the new robot can quickly learn how to walk by learning a mapping to the hidden state. I find this idea intriguing and would like to explore it further in future work.
 
 ### 5.4.2 Make the improvements and Re-run this experiment
-### 5.4.3 Redesign the failed trails
-### 5.4.4 A further study on the interesting observations
+### 5.4.3 Build upon this experiment: Implement the learning rate and new method to test symmtry design idea
+### 5.4.4 Redesign the failed trails
+### 5.4.5 A further study on the interesting observations
 
 # 6. Reference
 * https://www.reddit.com/r/ludobots/
