@@ -131,7 +131,6 @@ class SOLUTION:
         for j in self.bodyPlan[0]:
            if j > 0:
              d = numpy.random.choice(remainDir[0])
-             print(d)
              remainDir[0].remove(d)
              remainDir[0].remove(5-d)
              remainDir[j].remove(5-d)
