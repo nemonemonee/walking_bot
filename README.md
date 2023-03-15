@@ -8,14 +8,18 @@ One approach to creating robots with optimal performance is through artificial e
 
 ## 1.2 Gif Picture
 
-## 1.3 Code Resipotory
-The code is writeen in linux/macOS environment. 
+## 1.3 Code Respitory
+The code is writeen in linux/macOS environment. The respitory  is https://github.com/nemonemonee/walking_bot.
+
 The code to run simulation is :
   >python3 search.py
+
 The code to draw the curves is :
   >python3 curve.py
+
 The code to display the best robot is :
   >python3 load.py
+
 
 # 2. Project Design	
 ## 2.1 Body Design
