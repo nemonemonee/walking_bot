@@ -199,3 +199,4 @@ class SOLUTION:
         self.sensorOrNot = config_dict["sensor"]
         self.abs_pos = config_dict["abs_pos"]
         self.growDir = config_dict["grow_dir"]
+        self.Evaluate()
