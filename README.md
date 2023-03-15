@@ -5,6 +5,7 @@ This project is intended for CS 396 Artificial Life in Northwestern University. 
 One approach to creating robots with optimal performance is through artificial evolution. In this experiment, we utilized this approach by allowing a computer to randomly generate robots and evolve them over hundreds of generations, with the ultimate goal of achieving good performance on a specific task. The task at hand was to move in an environment with high gravitational force (g=200), with the robot's performance determined by its absolute movement on the xy-plane. While a good performance is the desired outcome, the fitness score of task performance was used as a selection criterion during the evolution process. In this article, we will delve into the design of our experiment, including the methodology used and the results obtained. Additionally, we will discuss potential areas for improvement and future directions for this research. Finally, we will draw a conclusion based on our findings.
 
 ## 1.1 Video
+[[!watch the video]()]()
 
 ## 1.2 Gif Picture
 
