@@ -73,7 +73,12 @@ In this experiment, we utilize the test group from 3.1 as the control group sinc
 
 # 4. Results and Analysis
 I average the fitness scores of each generation.
-## 4.1 Brain evolution with random bodies vs. the co-evolution of bodies and brains
+## 4.1 Graphs
+![mean_fit](https://user-images.githubusercontent.com/88709397/225175828-28979830-ec79-47e9-b746-262d6d894cf5.png)
+
+![fit_max](https://user-images.githubusercontent.com/88709397/225175856-ff30d314-d21b-4bb2-96d2-6e982ea6fcbd.png)
+
+## 4.2 Brain evolution with random bodies vs. the co-evolution of bodies and brains
 
 ## 4.2 Body Design: The Original vs. The Symmetric
 
