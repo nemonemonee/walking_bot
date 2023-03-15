@@ -2,7 +2,7 @@ import numpy
 amplitude, frequency, offset = 0.8, 1, 0
 numberOfGenerations = 10
 populationSize = 10
-motorJointRange = 0.8
+motorJointRange = 0.6
 simulationSteps = 5000
 
 #numSensorNeurons = 4
