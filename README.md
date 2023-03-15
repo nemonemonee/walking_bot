@@ -4,6 +4,19 @@ This project is intended for CS 396 Artificial Life in Northwestern University. 
 
 One approach to creating robots with optimal performance is through artificial evolution. In this experiment, we utilized this approach by allowing a computer to randomly generate robots and evolve them over hundreds of generations, with the ultimate goal of achieving good performance on a specific task. The task at hand was to move in an environment with high gravitational force (g=200), with the robot's performance determined by its absolute movement on the xy-plane. While a good performance is the desired outcome, the fitness score of task performance was used as a selection criterion during the evolution process. In this article, we will delve into the design of our experiment, including the methodology used and the results obtained. Additionally, we will discuss potential areas for improvement and future directions for this research. Finally, we will draw a conclusion based on our findings.
 
+## 1.1 Video
+
+## 1.2 Gif Picture
+
+## 1.3 Code Resipotory
+The code is writeen in linux/macOS environment. 
+
+python3 search.py
+
+python3 curve.py
+
+python3 load.py
+
 # 2. Project Design	
 ## 2.1 Body Design
 For the design of our body structure, we employed a tree structure. In this structure, each node represents a cube, and each edge signifies a joint between two cubes.  To build the tree structure, we randomly determine the size of the tree by generating a random integer. Once the size is determined, the tree is built in a random fashion, following the constraint that each node can have a maximum of three children.
@@ -58,7 +71,7 @@ In the natural world, many animals exhibit some form of symmetry. This raises th
 ### 3.2.1 Implemetation Details
 In this experiment, we utilize the test group from 3.1 as the control group since we are implementing the coevolution concept. However, we have simplified the process by eliminating the sensor swapping mutation since it is challenging to implement in the symmetry design. As a result, the test group runs for 1000 generations, and we only evaluate every even-numbered generation.
 
-# 4. Results
+# 4. Results and Analysis
 I average the fitness scores of each generation.
 ## 4.1 Brain evolution with random bodies vs. the co-evolution of bodies and brains
 
@@ -86,6 +99,7 @@ Recent deep learning research suggests that the model is capable of capturing th
 ### 5.4.3 Redesign the failed trails
 ### 5.4.4 A further study on the interesting observations
 
-# 6. Appendix
-
-# 7. Reference
+# 6. Reference
+* https://www.reddit.com/r/ludobots/
+* http://dirkmittler.homeip.net/blend4web_ce/uranium/bullet/docs/pybullet_quickstartguide.pdf
+* https://www.karlsims.com/papers/alife94.pdf
